@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LLM Inference Speeds</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        input { margin: 20px 0; padding: 10px; width: 200px; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { padding: 10px; border: 1px solid #ddd; text-align: left; }
+        th { background-color: #f2f2f2; }
+        a { color: blue; text-decoration: none; }
+        a:hover { text-decoration: underline; }
+    </style>
+</head>
+<body>
+<h1>LLM Inference Speeds</h1>
+<input type="text" id="searchInput" onkeyup="filterModels()" placeholder="Search for models...">
+
+<table id="dataTable">
+    <thead>
+    <tr>
+        <th>Model</th>
+        <th>Hardware</th>
+        <th>Speed</th>
+        <th>Proof</th>
+    </tr>
+    </thead>
+    <tbody>
+    </tbody>
+</table>
+
+<script src="data.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const tableBody = document.getElementById('dataTable').getElementsByTagName('tbody')[0];
+        modelData.forEach(item => {
+            let row = tableBody.insertRow();
+            let cell1 = row.insertCell(0);
+            let cell2 = row.insertCell(1);
+            let cell3 = row.insertCell(2);
+            let cell4 = row.insertCell(3);
+            cell1.textContent = item.model;
+            cell2.textContent = item.hardware;
+            cell3.textContent = item.speed;
+            cell4.innerHTML = '<a href="' + item.proof + '" target="_blank">Proof</a>';
+        });
+    });
+
+    function filterModels() {
+        var input, filter, table, tr, td, i, txtValue;
+        input = document.getElementById("searchInput");
+        filter = input.value.toUpperCase();
+        table = document.getElementById("dataTable");
+        tr = table.getElementsByTagName("tr");
+        for (i = 0; i < tr.length; i++) {
+            td = tr[i].getElementsByTagName("td")[0];
+            if (td) {
+                txtValue = td.textContent || td.innerText;
+                if (txtValue.toUpperCase().indexOf(filter) > -1) {
+                    tr[i].style.display = "";
+                } else {
+                    tr[i].style.display = "none";
+                }
+            }
+        }
+    }
+</script>
+</body>
+</html>
