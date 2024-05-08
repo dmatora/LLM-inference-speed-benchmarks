@@ -10,5 +10,6 @@ const modelData = [
   {"model": "Mistral Instruct 7B Q4", "hardware": "Nvidia RTX 4070", "speed": "70 tokens/sec", "proof": "https://github.com/dmatora/LLM-inference-speed-benchmarks/issues/4"},
   {"model": "Mistral Instruct 7B Q4", "hardware": "Nvidia RTX 3090", "speed": "120 tokens/sec", "proof": "https://github.com/dmatora/LLM-inference-speed-benchmarks/issues/4"},
   {"model": "Mistral Instruct 7B Q4", "hardware": "Nvidia RTX 4090", "speed": "140 tokens/sec", "proof": "https://github.com/dmatora/LLM-inference-speed-benchmarks/issues/4"},
+  {"model": "Meta Llama 3 Instruct 70B", "hardware": "2xP40", "speed": "3 tokens/sec", "proof": "https://github.com/dmatora/LLM-inference-speed-benchmarks/issues/9"},
   {"model": "Meta Llama 3 Instruct 70B Q4", "hardware": "M1 Max", "speed": "6 tokens/sec", "proof": "https://github.com/dmatora/LLM-inference-speed-benchmarks/issues/7"},
 ]
