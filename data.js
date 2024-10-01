@@ -13,5 +13,6 @@ const modelData = [
   {"model": "Meta Llama 3 Instruct 70B", "hardware": "2xP40", "speed": "3 tokens/sec", "proof": "https://github.com/dmatora/LLM-inference-speed-benchmarks/issues/9"},
   {"model": "Meta Llama 3 Instruct 70B Q4", "hardware": "M1 Max", "speed": "6 tokens/sec", "proof": "https://github.com/dmatora/LLM-inference-speed-benchmarks/issues/7"},
   {"model": "Qwen 2.5 32B Q4", "hardware": "i5-10600K", "speed": "1.3 tokens/sec", "proof": "https://github.com/dmatora/LLM-inference-speed-benchmarks/issues/14"},
+  {"model": "Qwen 2.5 32B Q4", "hardware": "Nvidia Tesla P40", "speed": "13 tokens/sec", "proof": "https://github.com/dmatora/LLM-inference-speed-benchmarks/issues/15"},
   {"model": "Qwen 2.5 32B Q4", "hardware": "Nvidia RTX 3090", "speed": "40 tokens/sec", "proof": "https://github.com/dmatora/LLM-inference-speed-benchmarks/issues/13"},
 ]
